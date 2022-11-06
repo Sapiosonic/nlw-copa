@@ -19,13 +19,8 @@ function createCard(date, day, games){
   `;
 }
 
-document.querySelector("#app").innerHTML = `
-  <header>
-      <img src="./assets/logo.svg" alt="">
-    </header>
-    <main id="cards">
-      ${createCard("24/11", "quinta",createGame("brazil", "16:00", "serbia"))}
-      ${createCard("28/11", "segunda",createGame("switzerland","13:00","brazil"))}
-      ${createCard("02/12", "sexta",createGame("brazil","16:00", "cameroon"))}
-    </main>
-`;
+document.querySelector("#cards").innerHTML = 
+  createCard("24/11", "quinta",createGame("brazil", "16:00", "serbia"))+
+  createCard("28/11", "segunda",createGame("switzerland","13:00","brazil"))+
+  createCard("02/12", "sexta",createGame("brazil","16:00", "cameroon"))
+;
